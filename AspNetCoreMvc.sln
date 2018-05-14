@@ -1,7 +1,12 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreMvc", "AspNetCoreMvc\AspNetCoreMvc.csproj", "{0CE3ABF2-89B9-47DC-8DA9-6C37464B6B76}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreMvc", "AspNetCoreMvc\AspNetCoreMvc.csproj", "{0CE3ABF2-89B9-47DC-8DA9-6C37464B6B76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itb.Shared", "Itb.Shared\Itb.Shared.csproj", "{F176CE43-43C6-4444-9411-D30186739F6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itb.Repositories", "Itb.Repositories\Itb.Repositories.csproj", "{D495ADF1-B7B6-43A4-8CDB-FB386EAD7FF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,5 +18,19 @@ Global
 		{0CE3ABF2-89B9-47DC-8DA9-6C37464B6B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CE3ABF2-89B9-47DC-8DA9-6C37464B6B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CE3ABF2-89B9-47DC-8DA9-6C37464B6B76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F176CE43-43C6-4444-9411-D30186739F6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F176CE43-43C6-4444-9411-D30186739F6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F176CE43-43C6-4444-9411-D30186739F6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F176CE43-43C6-4444-9411-D30186739F6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D495ADF1-B7B6-43A4-8CDB-FB386EAD7FF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D495ADF1-B7B6-43A4-8CDB-FB386EAD7FF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D495ADF1-B7B6-43A4-8CDB-FB386EAD7FF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D495ADF1-B7B6-43A4-8CDB-FB386EAD7FF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A4CB3D82-74BD-4070-9C7A-59F28415572B}
 	EndGlobalSection
 EndGlobal
