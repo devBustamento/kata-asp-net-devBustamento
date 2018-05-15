@@ -4,9 +4,9 @@ VisualStudioVersion = 15.0.27703.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreMvc", "AspNetCoreMvc\AspNetCoreMvc.csproj", "{0CE3ABF2-89B9-47DC-8DA9-6C37464B6B76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itb.Shared", "Itb.Shared\Itb.Shared.csproj", "{F176CE43-43C6-4444-9411-D30186739F6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Itb.Shared", "Itb.Shared\Itb.Shared.csproj", "{F176CE43-43C6-4444-9411-D30186739F6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itb.Repositories", "Itb.Repositories\Itb.Repositories.csproj", "{D495ADF1-B7B6-43A4-8CDB-FB386EAD7FF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Itb.Repositories", "Itb.Repositories\Itb.Repositories.csproj", "{D495ADF1-B7B6-43A4-8CDB-FB386EAD7FF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

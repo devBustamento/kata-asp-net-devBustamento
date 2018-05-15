@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using Dapper;
 using Itb.Shared;
+using System.Threading.Tasks;
 
 namespace Itb.Repositories 
 {
@@ -48,16 +49,16 @@ namespace Itb.Repositories
             using (var conn = _conn)
             {
                 conn.Open();
-                return conn.Query<Product>("SELECT *, ProductId FROM Product as Id WHERE ProductId = @Id").FirstOrDefault();
+                return conn.Query<Product>("SELECT *, ProductId as Id FROM Product WHERE ProductId = @Id", new { id }).FirstOrDefault();
             }
         }
 
-        public IEnumerable<Product> GetProducts()
+        public Task<IEnumerable<Product>> GetProducts()
         {
             using (var conn = _conn)
             {
                 conn.Open();
-                return conn.Query<Product>("SELECT *, ProductId FROM Product as Id WHERE ProductId = @Id");
+                return conn.QueryAsync<Product>("SELECT *, ProductId as Id FROM Product");
             }
         }
     }
