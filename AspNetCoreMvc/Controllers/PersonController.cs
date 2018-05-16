@@ -13,12 +13,12 @@ namespace AspNetCoreMvc.Controllers
         {
             var people = new List<Person>
             {
-                new Person { Name = "WHAT" },
-                new Person { Name = "THE HELL" },
-                new Person { Name = "IS" },
-                new Person { Name = "REFLECTION" },
-                new Person { Name = "IoC/DI" },
-                new Person { Name = "MVC" },
+                new Person { Name = "CoDy" },
+                new Person { Name = "cOdY" },
+                new Person { Name = "CodY" },
+                new Person { Name = "cODy" },
+                new Person { Name = "CODy" },
+                new Person { Name = "cODY" },
                 new Person { Name = "PLZ SEND HLP" }
             };   
            

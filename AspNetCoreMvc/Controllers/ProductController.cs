@@ -64,7 +64,6 @@ namespace AspNetCoreMvc.Controllers
         {
             try
             {
-                // TODO: Add update logic here
                 Product prod = new Product { Id = id, Name = collection["Name"] };
                 _prodRepo.UpdateProduct(prod);
                 return RedirectToAction(nameof(Index));

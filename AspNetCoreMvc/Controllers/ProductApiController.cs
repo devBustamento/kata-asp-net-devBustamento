@@ -2,45 +2,58 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Itb.Shared;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspNetCoreMvc.Controllers
 {
     [Produces("application/json")]
-    [Route("api/ProductApi")]
+    [Route("api/Product")]
     public class ProductApiController : Controller
     {
+        private readonly IProductRepository _prodRepo;
+
+        public ProductApiController(IProductRepository prodRepo)
+        {
+            _prodRepo = prodRepo;
+        }
+
         // GET: api/ProductApi
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IEnumerable<Product>> Get() //why is this an task<IEnum.......<product>>
         {
-            return new string[] { "value1", "value2" };
+            return await _prodRepo.GetProducts();
         }
 
         // GET: api/ProductApi/5
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        public Product Get(int id)
         {
-            return "value";
+            return _prodRepo.GetProduct(id);
         }
         
         // POST: api/ProductApi
         [HttpPost]
         public void Post([FromBody]string value)
         {
+            var prod = new Product() { Name = value };
+            _prodRepo.CreateProduct(prod);
         }
         
         // PUT: api/ProductApi/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]string value)
         {
+            var prod = new Product() { Id = id, Name = value };
+            _prodRepo.UpdateProduct(prod);
         }
         
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            _prodRepo.DeleteProduct(id);
         }
     }
 }
