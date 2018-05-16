@@ -30,7 +30,7 @@ namespace AspNetCoreMvc.Controllers
         // GET: Product/Create
         public ActionResult Create()
         {
-            return View();
+            return View(_prodRepo.GetProduct(id));
         }
 
         // POST: Product/Create
