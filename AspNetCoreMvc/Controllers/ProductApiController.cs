@@ -21,7 +21,7 @@ namespace AspNetCoreMvc.Controllers
 
         // GET: api/ProductApi
         [HttpGet]
-        public async Task<IEnumerable<Product>> Get() //why is this an task<IEnum.......<product>>
+        public async Task<IEnumerable<Product>> Get() 
         {
             return await _prodRepo.GetProducts();
         }

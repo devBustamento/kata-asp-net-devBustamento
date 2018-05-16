@@ -64,7 +64,7 @@ namespace AspNetCoreMvc.Controllers
         {
             try
             {
-                Product prod = new Product { Id = id, Name = collection["Name"] };
+                var prod = new Product() { Name = collection["Name"] };
                 _prodRepo.UpdateProduct(prod);
                 return RedirectToAction(nameof(Index));
             }
@@ -77,7 +77,7 @@ namespace AspNetCoreMvc.Controllers
         // GET: Product/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            return View(_prodRepo.GetProduct(id));
         }
 
         // POST: Product/Delete/5
@@ -87,7 +87,7 @@ namespace AspNetCoreMvc.Controllers
         {
             try
             {
-                var rowsaffected = _prodRepo.DeleteProduct(id);
+                _prodRepo.DeleteProduct(id);
                 return RedirectToAction(nameof(Index));
             }
             catch

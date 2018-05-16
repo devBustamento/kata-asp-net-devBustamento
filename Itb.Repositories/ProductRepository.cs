@@ -22,7 +22,7 @@ namespace Itb.Repositories
             using (var conn = _conn)
             {
                 conn.Open();
-                return conn.Execute("INSTER INTO product (Name) VALUES (@Name)", prod);
+                return conn.Execute("INSERT INTO product (Name) VALUES (@Name)", prod);
             }
         }
 
@@ -40,7 +40,7 @@ namespace Itb.Repositories
             using (var conn = _conn)
             {
                 conn.Open();
-                return conn.Execute("UPDAGE product SET Name = @Name WHERE ProductId = @id", prod);
+                return conn.Execute("UPDATE product SET Name = @Name WHERE ProductId = @id", prod);
             }
         }
 
