@@ -44,7 +44,7 @@ namespace Itb.Repositories
             }
         }
 
-        public Product GetProduct(int id)
+        public async Task<Product> GetProduct(int id) 
         {
             using (var conn = _conn)
             {
@@ -53,12 +53,12 @@ namespace Itb.Repositories
             }
         }
 
-        public Task<IEnumerable<Product>> GetProducts()
+        public async Task<IEnumerable<Product>> GetProducts()
         {
             using (var conn = _conn)
             {
                 conn.Open();
-                return conn.QueryAsync<Product>("SELECT *, ProductId as Id FROM Product");
+                return await conn.QueryAsync<Product>("SELECT *, ProductId as Id FROM Product");
             }
         }
     }
