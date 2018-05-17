@@ -17,7 +17,6 @@ namespace AspNetCoreMvc.Controllers
         // GET: Product
         public async Task<ActionResult> Index()
         {   
-
             return View(await _prodRepo.GetProducts());
         }
 
@@ -30,7 +29,7 @@ namespace AspNetCoreMvc.Controllers
         // GET: Product/Create
         public ActionResult Create()
         {
-            return View(_prodRepo.GetProduct(id));
+            return View();
         }
 
         // POST: Product/Create
