@@ -44,21 +44,21 @@ namespace Itb.Repositories
             }
         }
 
-        public async Task<Product> GetProduct(int id) 
+        public Task<Product> GetProduct(int id) 
         {
             using (var conn = _conn)
             {
                 conn.Open();
-                return conn.Query<Product>("SELECT *, ProductId as Id FROM Product WHERE ProductId = @Id", new { id }).FirstOrDefault();
+                return conn.QueryFirstAsync<Product>("SELECT *, ProductId as Id FROM Product WHERE ProductId = @Id", new { id });
             }
         }
 
-        public async Task<IEnumerable<Product>> GetProducts()
+        public Task<IEnumerable<Product>> GetProducts()
         {
             using (var conn = _conn)
             {
                 conn.Open();
-                return await conn.QueryAsync<Product>("SELECT *, ProductId as Id FROM Product");
+                return conn.QueryAsync<Product>("SELECT *, ProductId as Id FROM Product");
             }
         }
     }
